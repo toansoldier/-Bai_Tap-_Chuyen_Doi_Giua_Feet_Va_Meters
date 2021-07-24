@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyen doi giua feet va meters</title>
+</head>
+<body>
+<h3>Chuyen doi giua Foot Va Meters</h3>
+<input type="text" id="inputNum1">
+<button id="btnFtm" onclick="show1()">Foot To Meter</button>
+<br/><br/>
+<input type="text" id="inputNum2">
+<button id="btnMtf" onclick="show2()">Meter To Foot</button>
+<br>
+<p>Result: <span id="result"></span></p>
+<script>
+    function footToMeter(foot) {
+        let result = (foot * 3.279).toFixed(1);
+        return result +" Meter";
+    }
+
+    function meterToFoot(meter) {
+        let result = (meter * 0.305).toFixed(1);
+        return result + " Foot";
+    }
+
+    function show1(){
+        let value1 = parseInt(document.getElementById("inputNum1").value);
+        document.getElementById("result").innerHTML = footToMeter(value1);
+    }
+    function show2(){
+        let value2 = parseInt(document.getElementById("inputNum2").value);
+        document.getElementById("result").innerText = meterToFoot(value2);
+    }
+</script>
+</body>
+</html>
